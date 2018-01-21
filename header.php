@@ -68,7 +68,7 @@
 	?>
 
     <div class="loader">
-        <?php require_once("./app/themes/virtuaswpt/assets/svg/layout/puff.svg"); ?>
+        <?php require_once("./assets/svg/layout/puff.svg"); ?>
     </div>
 
 	<header class="main-header">
