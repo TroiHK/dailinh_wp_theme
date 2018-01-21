@@ -14,7 +14,7 @@ define('SPRITE', $sprite);
 function printSvgSprite() {
 	if(HTTP_USER_AGENT) {
 		echo '<div style="display: none;">';
-		require_once("./assets/svg/sprite.svg");
+		require_once("./wp-content/themes/dailinh_wp_theme/assets/svg/sprite.svg");
 		echo '</div>';
 	}
 }
