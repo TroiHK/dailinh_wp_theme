@@ -1,14 +1,15 @@
 <?php 
-	$projetID = get_sub_field('projet');
 	$slider_items_hp = get_field('slide_hp');
-	$slide_image = get_sub_field('image');
 ?>
 <?php if ( have_rows('slide_hp') ) : ?>
 <section class="section-cover center">
 	
 	<div class="slider">
 		<?php while ( have_rows('slide_hp') ) : the_row(); ?>
-			<?php while ( have_rows('item') ) : the_row(); ?>
+			<?php while ( have_rows('item') ) : the_row(); 
+				$projetID = get_sub_field('projet'); 
+				$slide_image = get_sub_field('image');
+			?>
 				<?php 
 					$slide_image = $slide_image ? $slide_image : wp_get_attachment_image_src($projetID);
 					$url_image = $slide_image['sizes']['main-slider'];
@@ -25,7 +26,9 @@
 
 	<div class="slider-content" data-dir="vertical">
 		<?php while ( have_rows('slide_hp') ) : the_row(); ?>
-		<?php while ( have_rows('item') ) : the_row(); ?>
+		<?php while ( have_rows('item') ) : the_row();
+			$projetID = get_sub_field('projet'); 
+		?>
 		<?php 
 			$projectTitle = get_sub_field('titre_du_slide') ? get_sub_field('titre_du_slide') : get_the_title( $projetID );
 			$sous_titre = get_sub_field('sous-titre');
