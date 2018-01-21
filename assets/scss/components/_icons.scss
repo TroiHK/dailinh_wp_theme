@@ -1,0 +1,243 @@
+/*------------------------------------*\
+		Pictogrammes
+\*------------------------------------*/
+
+.icon {
+	display: inline-block;
+	vertical-align: middle;
+
+	svg {
+		display: block;
+	}
+
+	&__logo {
+		&,
+		svg {
+			width: 218px;
+			height: 63px;
+
+			* {
+				fill: $grey-dark;
+			}
+		}
+	}
+	&__loupe {
+		&,
+		svg {
+			width: 16px;
+			height: 16px;
+
+			* {
+				fill: $grey-dark;
+			}
+		}
+	}
+	&__arrow-right {
+		&,
+		svg {
+			width: 10px;
+			height: 10px;
+
+			* {
+				fill: $grey-dark;
+			}
+		}
+	}
+
+	&__fb{
+		&,
+		svg {
+			width: 8px;
+			height: 16px;
+
+			* {
+				fill: #FFF;
+			}
+		}
+	}
+	&__insta {
+		&,
+		svg {
+			width: 16px;
+			height: 16px;
+
+			* {
+				fill: #FFF;
+			}
+		}
+	}
+	&__linkedin {
+		&,
+		svg {
+			width: 17px;
+			height: 16px;
+
+			* {
+				fill: #FFF;
+			}
+		}
+	}
+	&__dl {
+		&,
+		svg {
+			width: 21px;
+			height: 27px;
+
+			* {
+				fill: #000;
+			}
+		}
+	}
+	&__marker {
+		&,
+		svg {
+			width: 55px;
+			height: 80px;
+
+			* {
+				fill: #000;
+			}
+		}
+	}
+	&__share {
+		&,
+		svg {
+			width: 17px;
+			height: 21px;
+
+			* {
+				fill: #000;
+			}
+		}
+	}
+}
+
+
+
+.arrow-left,
+.arrow-right {
+	width: 20px;
+	height: 26px;
+	display: inline-block;
+	vertical-align: middle;
+	
+	&:before {
+		content:'';
+		height: 1px;
+		width: 100%;
+		background: $grey-dark;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform-origin: right center;
+		transition: all 0.4s $in-out-circ;
+	}
+
+	&:after{
+		content:'';
+		width: 15px;
+		height: 15px;
+		position: absolute;
+		right: 2px;
+		top: 50%;
+		transform: rotate(-45deg);
+		border-right: 1px solid $grey-dark;
+		border-bottom: 1px solid $grey-dark;
+		margin-top: -7px;
+		transition: all 0.4s $in-out-circ;
+	}
+
+	&.arrow-left {
+		&:before {
+			transform-origin: left center;
+		}
+		&:after {
+			transform: rotate(135deg);
+			right: auto;
+			left: 2px;
+		}
+	}
+
+	&:hover,
+	a:hover & {
+		&:before{
+			transform: scale3d(0.7, 1, 1);
+		}
+	}
+}
+
+
+
+
+.icon-filter {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 0;
+	height: 18px;
+
+	span {
+		vertical-align: top;
+		display: inline-block;
+		height: 18px;
+		width: 1px;
+		margin-left: 6px;
+		background: $grey-light;
+		transition: all 0.5s ease;
+
+		&:after {
+			content:'';
+			width: 5px;
+			height: 5px;
+			position: absolute;
+			top: 0;
+			left: 50%;
+			background: #FFF;
+			border: 1px solid $grey-light;
+			border-radius: 50%;
+			transition: all 0.5s $in-out-circ;
+			transform: translate3d(-50%, 0%, 0);
+		}
+
+		&:nth-child(1) {
+			&:after {
+				top: 50%;
+			}
+		}
+
+		&:nth-child(2) {
+			&:after {
+				top: 20%;
+			}
+		}
+
+		&:nth-child(3) {
+			&:after {
+				top: 50%;
+			}
+		}
+	}
+
+	&:hover,
+	a:hover & {
+		span {
+
+			&:nth-child(1) {
+				&:after {
+					transform: translate3d(-50%, -100%, 0);
+				}
+			}
+
+			&:nth-child(2) {
+				&:after {
+					transform: translate3d(-50%, 120%, 0);
+				}
+			}
+
+			&:nth-child(3) {
+				&:after {
+					transform: translate3d(-50%, -170%, 0);
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,98 @@
+.feature-item {
+	margin-bottom: 60px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	@media #{md('m')} {
+		margin-right: 5%;
+		margin-bottom: 0;
+	}
+
+	&__title {
+		font-size: 1.25em;
+		font-weight: 600;
+		text-transform: uppercase;
+		margin: 0;
+	}
+
+	&__img {
+		margin-top: 0.65em;
+		margin-bottom: 0.8em;
+
+		a {
+			display: block;
+
+			.btn-round {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 1);
+				z-index: z('default');
+				transition: all 0.5s $out-back;
+				will-change: auto;
+
+				i {
+					&:after {
+						display: none;
+					}
+				}
+			}
+
+			&:hover {
+				.btn-round {
+					transform: translate3d(-50%, -50%, 0) scale3d(1, 1, 1);
+				}
+			}
+		}
+
+		img {
+			display: block;
+			width: 100%;
+		}
+	}
+
+	&__info {
+		p {
+			color: $grey-light;
+			margin-bottom: 0.3em;
+		}
+	}
+
+	&.js-reveal {
+		.feature-item__img,
+		.feature-item__info {
+			opacity: 0;
+			transform: translate3d(0, 60px, 0);
+			transition: all 0.7s $out-quad;
+		}
+
+		&.is-visible {
+			.feature-item__img,
+			.feature-item__info {
+				opacity: 1;
+				transform: translate3d(0, 0, 0);
+			}
+
+			@for $i from 0 through 10 {
+				&:nth-child(#{$i + 1}) {
+					
+					.feature-item__title {
+						span {
+							span {
+								transition-delay: #{$i * 0.2s};
+							}
+						}
+					}
+					.feature-item__img {
+						transition-delay: #{$i * 0.3s};
+					}
+					.feature-item__info {
+						transition-delay: #{$i * 0.4s};
+					}
+				}
+			}
+		}
+	}
+}

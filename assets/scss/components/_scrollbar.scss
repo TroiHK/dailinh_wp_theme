@@ -1,0 +1,21 @@
+.simplebar-track {
+	right: 6px;
+	width: 4px;
+	border-radius: 2px;
+
+	&.vertical {
+		background: rgba($grey, 0.3);
+	}
+
+	&.horizontal {
+		display: none;
+	}
+
+	.simplebar-scrollbar {
+		right: 0;
+		width: 100%;
+		border-radius: 2px;
+		background: rgba($grey, 1);
+		opacity: 1;
+	}
+}

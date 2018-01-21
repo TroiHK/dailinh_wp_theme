@@ -1,0 +1,107 @@
+.team {
+	&__function {
+		font-size: 1.625em;
+		font-weight: 500;
+		color: #000;
+		line-height: 1.5em;
+		margin-top: -0.7em;
+		margin-bottom: 1.5em;
+
+		@media #{md('m')} {
+			margin-top: -1em;
+			margin-bottom: 3em;
+		}
+	}
+	&__img{
+		max-width: 100%;
+		width: #{1440px / 2};
+
+		@media #{md('m')} { 
+			//margin-top: -10em;
+			margin-bottom: -10em;
+			max-width: 50vw;
+			position: absolute;
+			//top: 0;
+			bottom: 0;
+			left: 50%;
+		}
+
+		img {
+			display: block;
+			width: 100%;
+		}
+
+		&.js-reveal {
+			transform: translate3d(0, 20%, 0);
+			transition: all 0.7s $in-out-quad;
+			opacity: 0;
+
+			&.is-visible {
+				opacity: 1;
+				transform: translate3d(0, 0, 0);
+			}
+		}
+	}
+
+	&__references {
+		padding-top: 0px;
+		padding-bottom: 20px;
+
+		@media #{md('s')} {
+			padding-top: 80px;
+			padding-bottom: 20px;
+		}
+
+		&-slider {
+			padding-bottom: 55px;
+			margin-bottom: 40px;
+
+			@media #{md('m')} {
+				margin-top: -10em;
+			}
+
+			.slider-arrow {
+				position: absolute;
+				cursor: pointer;
+				bottom: 0;
+				right: 0;
+				transition: all 0.3s ease;
+
+				@each $breakpoint in $breakpoints {
+					$key: nth($breakpoint, 1);
+					$grid-gutter: map-get($grid-gutters, $key);
+
+					@media #{md($key)} {
+						right: $grid-gutter * 0.5;
+					}
+				}
+
+				&.slick-disabled {
+					opacity: 0.2;
+					pointer-events: none;
+				}
+
+				&.arrow-prev {
+					margin-right: 38px;
+				}
+			}
+
+			.item {
+				margin-bottom: 0;
+				margin-top: 30px;
+
+				@media #{md('l')} {
+					margin-top: 70px;
+				}
+			}
+		}
+
+		&-slide {
+		}
+	}
+
+
+	&__publications {
+		padding-bottom: 40px;
+	}
+}

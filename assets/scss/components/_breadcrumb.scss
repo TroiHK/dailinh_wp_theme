@@ -1,0 +1,65 @@
+.breadcrumb {
+	@include reset-ul;
+	font-size: 0.875em;
+	font-weight: 600;
+	text-transform: uppercase;
+	pointer-events: all;
+
+	&.js-reveal {
+		li {
+			opacity: 0;
+			transform: translate3d(0, 15px, 0);
+			transition: all 0.5s $in-out-quad;
+		}
+
+		&.is-visible {
+			li {
+				opacity: 1;
+				transform: translate3d(0, 0, 0); 
+
+				@for $i from 0 through 10 {
+					&:nth-child(#{$i + 1}) {
+						transition-delay: #{$i * 0.15s};
+					}
+				}
+			}
+		}
+	}
+
+	li {
+		display: inline-block;
+
+		&:first-child {
+			&:before {
+				display: none;
+			}
+		}
+
+		&:before {
+			content:' > ';
+			display: inline-block;
+			vertical-align: middle;
+			opacity: 0.5;
+			top: -1px;
+			margin-left: 2px;
+			margin-right: 6px;
+		}
+		
+		a {
+			opacity: 0.5;
+			transition: all 0.5s ease;
+
+			&.current {
+				opacity: 1;
+			}
+		}
+	}
+
+	& + h1 {
+		margin-top: 0.5em;
+
+		@media #{md('m')} {
+			margin-top: 0.2em;
+		}
+	}
+}

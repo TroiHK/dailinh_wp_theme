@@ -1,0 +1,52 @@
+// We need to import
+// the variables first
+// so they are available
+// to use in the tools
+@import "base/variables";
+@import "base/ress"; // {ress|normalize|reset}
+
+// Tools
+@import "tools/functions";
+@import "tools/mixins";
+@import "tools/helpers";
+
+// Vendors
+@import "vendors/slick";
+@import "vendors/flickity";
+@import "vendors/simplebar";
+
+// Components
+@import "components/icons";
+@import "components/cookies";
+@import "components/forms";
+@import "components/signature";
+@import "components/buttons";
+@import "components/cover";
+@import "components/slider";
+@import "components/news";
+@import "components/feature";
+@import "components/quote";
+@import "components/filter";
+@import "components/item";
+@import "components/breadcrumb";
+@import "components/entry";
+@import "components/gallery";
+@import "components/tabs";
+@import "components/error";
+@import "components/search";
+@import "components/video";
+@import "components/scrollbar";
+@import "components/loader";
+
+// Layout
+@import "layout/global";
+@import "layout/grid";
+@import "layout/main";
+@import "layout/header";
+@import "layout/footer";
+
+// Pages
+@import "pages/home";
+@import "pages/team";
+@import "pages/project";
+@import "pages/publications";

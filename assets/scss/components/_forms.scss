@@ -1,0 +1,275 @@
+/*------------------------------------*\
+		Form
+\*------------------------------------*/
+
+// .form {}
+.form-item {
+	margin-bottom: 1px;
+
+	&:after {
+		content:'';
+		width: 5px;
+		height: 5px;
+		position: absolute;
+		top: 50%;
+		right: 15px;
+		transform: scale3d(0, 0, 1) translate3d(0, -50%, 0);
+		background: #000;
+		border-radius: 50%;
+		transition: all 0.6s $in-out-back;
+	}
+
+	&.error {
+		&:after {
+			background: #d24155;
+			transform: scale3d(1, 1, 1) translate3d(0, -50%, 0);
+		}
+	}
+
+	&.onfocus,
+	.onfocus & {
+		&:after {
+			transform: scale3d(1, 1, 1) translate3d(0, 0 ,0);
+		}
+	}
+
+	&.js-reveal {
+		opacity: 0;
+		transform: translate3d(30px, 0, 0);
+		transition: all 0.5s $in-out-quad;
+
+		&.is-visible {
+			opacity: 1;
+			transform: translate3d(0, 0, 0);
+
+			@for $i from 0 through 10 {
+				&:nth-child(#{$i + 1}) {
+					transition-delay: #{$i * 0.05s};
+				}
+			}
+		}
+	}
+}
+
+.form-consigne {
+	font-size: 0.875em;
+	font-weight: 600;
+	color: $grey-mid;
+	margin-top: -0.5em;
+}
+ 
+
+/*------------------------------------*\
+		Labels
+\*------------------------------------*/
+
+.form-label {
+	font-size: 0.75em;
+	text-transform: uppercase;
+	font-weight: 600;
+	text-transform: uppercase;
+	display: block;
+	width: 100%;
+	padding: 0 15px;
+	pointer-events: none;
+	position: absolute;
+	top: #{3.5rem / 2};
+	transform: translate3d(0, -50%, 0);
+	left: 0;
+	z-index: z('default');
+	color: $grey-mid;
+	transition: all 0.4s $in-out-circ;
+
+	.onfocus &,
+	.onfill & {
+		margin-top: -10px;
+	}
+}
+
+
+
+/*------------------------------------*\
+		Basic text input
+\*------------------------------------*/
+
+.form-text {
+	display: block;
+	width: 100%;
+	border-radius: 0;
+	padding: 0 15px;
+	appearance: none;
+	border: 1px solid $grey-light2;
+	outline: none;
+	padding-top: 1.25rem;
+	line-height: 2.25rem;
+	height: 3.5rem;
+	font-size: 0.875em;
+	font-weight: 600;
+	color: #000;
+	border-top: 0;
+
+	.first & {
+		border-top: 1px solid $grey-light2;
+	}
+
+	&.error,
+	.error & {
+		border-color: #d24155;
+	}
+}
+
+/*------------------------------------*\
+		Basic textarea
+\*------------------------------------*/
+
+.form-textarea {
+	display: block;
+	width: 100%;
+	border-radius: 0;
+	padding: 0 15px;
+	appearance: none;
+	border: 1px solid $grey-light2;
+	outline: none;
+	padding-top: 1.6rem;
+	padding-bottom: 1.6rem;
+	line-height: 1.5rem;
+	font-size: 0.875em;
+	font-weight: 600;
+	color: #000;
+	border-top: 0;
+	resize: none;
+
+	.first & {
+		border-top: 1px solid $grey-light2;
+	}
+
+	&.error,
+	.error & {
+		border-color: #d24155;
+	}
+}
+
+
+
+/*------------------------------------*\
+		Button
+\*------------------------------------*/
+.form-submit {
+	margin-top: 30px;
+	margin-bottom: 20px;
+
+	&:before {
+		content:'';
+		width: 44px;
+		height: 44px;
+		position: absolute;
+		top: 50%;
+		left: 100%;
+		margin-top: -22px;
+		margin-left: 20px;
+		background: transparent url(#{$svg-dir}puff.svg) center center no-repeat;
+		background-size: contain;
+		transform: scale3d(0, 0, 1);
+		transition: all 0.5s $in-out-quad;
+
+		.sendform & {
+			transform: scale3d(1, 1, 1);
+		}
+	}
+}
+
+
+/*------------------------------------*\
+		Select list
+\*------------------------------------*/
+
+.form-select {
+	cursor: pointer;
+
+	select {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		-ms-appearance: none;
+		appearance: none;
+		display: block;
+		width: 100%;
+		border-radius: 0;
+		padding: 0 15px;
+		padding-right: 45px;
+		appearance: none;
+		border: 1px solid $grey-light2;
+		outline: none;
+		padding-top: 1.25rem;
+		line-height: 2.25rem;
+		height: 3.5rem;
+		font-size: 0.875em;
+		font-weight: 600;
+		color: #000;
+		border-top: 0;
+
+		.first & {
+			border-top: 1px solid $grey-light2;
+		}
+
+		&.error,
+		.error & {
+			border-color: #d24155;
+		}
+	}
+
+	&:before {
+		content:'';
+		width: 40px;
+		height: calc(100% - 2px);
+		position: absolute;
+		top: 0;
+		right: 1px;
+		z-index: z('default');
+		background: #FFF;
+	}
+
+	&:after {
+		content:'';
+		position: absolute;
+		top: 50%;
+		right: 11px;
+		width: 12px;
+		height: 12px;
+		margin-top: -6px;
+		z-index: z('default');
+		background: transparent url(#{$svg-dir}arrow-right.svg) center center no-repeat;
+		transform: rotate(90deg);
+		background-size: contain;
+		transition: all 0.5s $in-out-circ;
+	}
+
+	&:hover {
+		&:after {
+			transform: rotate(-90deg);
+		}
+	}
+}
+
+
+
+/*------------------------------------*\
+		Checkbox
+\*------------------------------------*/
+
+// .form__checkbox {
+//
+// 	&:checked {
+//
+// 		+ .form__label {}
+// 	}
+//
+// 	+ .form__label {}
+// }
+
+
+
+/*---------------------------------------*\
+		Variations de formulaires
+\*---------------------------------------*/
+
+// .form--contact {}

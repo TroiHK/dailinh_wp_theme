@@ -1,0 +1,115 @@
+.quote {
+	padding-top: 10px;
+	margin-bottom: 20px;
+
+	@media #{md('s')} {
+		margin-bottom: 50px;
+	}
+
+	h2 {
+		text-transform: none;
+		font-size: 1.75em;
+		line-height: 1.2em;
+		color: #000;
+		margin-bottom: 0.5em;
+		font-weight: 600;
+		margin-top: 3.2em;
+
+		@media #{md('s')} {
+			margin-top: 1.8em;
+			font-size: 3.375em;
+		}
+	}
+
+	&__author {
+		text-transform: uppercase;
+		color: $grey-light;
+		margin-bottom: 2em;
+		font-size: 0.875em;
+
+		@media #{md('s')} {
+			font-size: 0.75em;
+			margin-bottom: 4.5em;
+		}
+	}
+
+	.desc {
+		&.js-reveal {
+			&.is-visible {
+				transition-delay: 0.35s;
+			}
+		}
+	}
+
+	.link {
+		&.js-reveal {
+			transition: all 0.5s ease;
+			transform: translate3d(0, 30px, 0);
+			opacity: 0;
+
+			&.is-visible {
+				opacity: 1;
+				transform: translate3d(0, 0, 0);
+				transition-delay: 0.45s;
+			}
+		}
+	}
+
+	.shape {
+		width: 120px;
+		position: absolute;
+		margin-left: -60px;
+		top: 0;
+		left: 50%;
+
+		@media #{md('s')} {
+			margin-left: -85px;
+			width: 170px;
+		}
+
+		.trace {
+			stroke-dashoffset: 520px;
+			stroke-dasharray: 520px;
+			transition: all 1.3s $in-out-circ;
+		}
+
+		&.js-reveal {
+			opacity: 0;
+			transform: translate3d(0, 40px, 0);
+			transition: all 0.5s $in-out-quad;
+
+			&.is-visible{
+				opacity: 1;
+				transform: translate3d(0, 0, 0);
+
+				.trace {
+					transition-delay: 0.3s;
+					stroke-dashoffset: 0;
+
+					@for $i from 0 through 3 {
+						&:nth-child(#{$i + 1}):not(.trace-hover) {
+							transition-delay: #{$i * 0.2s + 0.3s};
+						}
+					}
+
+					&.trace-hover {
+						stroke-dashoffset: 520px;
+						animation: trace 2s $in-out-circ forwards 1.2s;
+					}
+				}
+			}
+		}
+	}
+
+	@keyframes trace {
+		0% {
+			stroke-dashoffset: 520px;
+		}
+		50% {
+			stroke-dashoffset: 0;
+		}
+		100% {
+			stroke-dashoffset: -520px;
+		}
+	}
+}

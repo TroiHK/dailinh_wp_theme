@@ -1,0 +1,1 @@
+Dossier pour les fichiers SVG qui n'ont pas besoin d'être dans le sprite, mais qu'on veut quand même utilisé. Pas besoin de trop charger le sprite :)

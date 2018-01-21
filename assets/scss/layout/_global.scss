@@ -1,0 +1,142 @@
+/*---------------------------------------*\
+		Sélection
+\*---------------------------------------*/
+
+::-moz-selection {
+	text-shadow: none;
+	color: $selection-color;
+	background: $selection-bg;
+}
+
+::selection {
+	text-shadow: none;
+	color: $selection-color;
+	background: $selection-bg;
+}
+
+
+
+/*---------------------------------------*\
+		Réglages globaux
+\*---------------------------------------*/
+
+*,
+*:after,
+*:before {
+	position: relative;
+	outline: none;
+}
+
+html {
+	font-size: $font-size;
+
+	&.open-menu,
+	&.open-gallery {
+		overflow-y: hidden;
+	}
+}
+
+// Better font rendering for mac
+.is-mac,
+.is-mac input,
+.is-mac button,
+.is-mac textarea {
+	@include antialiased;
+}
+
+
+.c-grey-light {
+	color: $grey-light;	
+}
+.c-grey {
+	color: rgba($grey-dark, 0.5) !important;
+}
+
+
+
+/*------------------------------------*\
+		Base typographique
+
+		More settings:
+		http://type-scale.com/
+\*------------------------------------*/
+
+// Include fontface
+@include fontfaces($fontfaces, $font-dir);
+
+body {
+	font-family: ff("sans");
+	font-size: 1em;
+	line-height: $line-height;
+	color: $font-color;
+	overflow: hidden;
+}
+
+p,
+ul,
+ol,
+blockquote {
+	margin-bottom: $line-height * 1em;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	margin: 1.414em 0 0.8em;
+	font-family: ff("sans");
+	line-height: 1.25;
+	color: #000;
+	z-index: z('default');
+	font-weight: 600;
+}
+
+h1 {
+	margin-top: 0.25em;
+	font-size: 2em;
+
+	@media #{md('s')} {
+		font-size: 3.4em;
+	}
+
+	@media #{md('l')} {
+		font-size: 3.5em;
+	}
+}
+
+h2 {
+	font-size: 1.75em;
+	text-transform: uppercase;
+
+	@media #{md('s')} {
+		font-size: 2.125em;
+	}
+
+	small {
+		display: block;
+		font-size: 0.875rem;
+	}
+}
+
+h3 {
+	font-size: 1.777em;
+}
+
+h4 {
+	font-size: 0.875em;
+	text-transform: uppercase;
+}
+
+small {
+	font-size: 0.75em;
+}
+
+sup {
+	vertical-align: super;
+	font-size: 0.75em;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}

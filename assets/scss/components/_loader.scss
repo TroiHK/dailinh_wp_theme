@@ -1,0 +1,8 @@
+.loader {
+	transition: all 0.8s $in-out-quad;
+
+	.page-is-loaded & { 
+		opacity: 0;
+		visibility: hidden;
+	}
+}
