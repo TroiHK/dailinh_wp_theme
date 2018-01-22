@@ -25,8 +25,8 @@ $post_type = get_field('utweb_post_type');
                         $args = array(
                             'post_type'  => $post_type,
                             'posts_per_page'     => -1,
-                            'order'      => 'date',
-                            'order_by'    => 'DESC'
+                            'orderby'      => 'date',
+                            'order'    => 'DESC'
                         );
                         $posts = new WP_Query( $args );
 

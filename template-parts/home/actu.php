@@ -2,9 +2,9 @@
 <?php
 	$arrg = array(
 		'post_type' => 'bat_dong_san',
-		'order_by' => 'post_date',
+		'orderby' => 'post_date',
 		'posts_per_page' => 6,
-		'order_by' => 'DESC'
+		'order' => 'DESC'
 	);
 	$actu_post = new WP_Query($arrg);
 
