@@ -1,4 +1,4 @@
-<?php while ( have_rows('actualites_hp') ) : the_row(); die('0'); ?>
+<?php while ( have_rows('actualites_hp') ) : the_row(); ?>
 <?php
 	$arrg = array(
 		'post_type' => 'bat_dong_san',
