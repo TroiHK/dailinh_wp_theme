@@ -4,7 +4,7 @@
 		'post_type' => 'bat_dong_san',
 		'order_by' => 'post_date',
 		'posts_per_page' => 6,
-		'order' => 'DESC'
+		'order_by' => 'DESC'
 	);
 	$actu_post = new WP_Query($arrg);
 
