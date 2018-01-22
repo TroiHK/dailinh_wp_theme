@@ -11,7 +11,7 @@
 				$slide_image = get_sub_field('image');
 			?>
 				<?php 
-					$slide_image = $slide_image ? $slide_image : wp_get_attachment_image_src($projetID);
+					$slide_image = $slide_image ? $slide_image : wp_get_attachment_image_src( get_post_thumbnail_id($projetID) );
 					$url_image = $slide_image['sizes']['main-slider'];
 					$url_image_mobile = $slide_image['sizes']['mobile-slide'];
 				?>
