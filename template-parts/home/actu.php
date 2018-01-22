@@ -44,20 +44,7 @@
 	<?php if ( $actu_post->have_posts() ) : ?>
 	<div class="news-carousel js-reveal" style="width: 3000px;">
 		<?php while ( $actu_post->have_posts() ) : $actu_post->the_post(); ?>
-		<article class="news-slide">
-			<div class="news-slide__inner">
-				<div class="news-slide__info">
-					<time><?= get_the_date('d-m-Y') ?></time>
-					<h3><a href="<?= get_the_permalink() ?>"><?= get_the_title() ?></a></h3>
-				</div>
-				<figure class="news-slide__img">
-					<a href="<?= get_the_permalink() ?>">
-						<span class="btn-round"><i><span></span></i></span>
-						<img src="<?= get_post_thumnail('actu-thumnail') ?>" alt="<?= $post->post_name ?>">
-					</a>
-				</figure>
-			</div>
-		</article>
+		
 		<?php endwhile; ?>
 	</div>
 	<?php endif; ?>
