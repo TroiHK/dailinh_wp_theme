@@ -12,7 +12,7 @@
 			?>
 				<?php 
 					if ( $slide_image ) :
-						$url_image = $slide_image['sizes']['main-slider'];
+						$url_image = $slide_image['sizes'];
 						$url_image_mobile = $slide_image['sizes']['mobile-slide'];
 						var_dump($url_image);
 					else :
