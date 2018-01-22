@@ -6,7 +6,16 @@ $prev_id = get_previous_post_id(get_the_ID());
     <div class="grid__row">
         <div class="grid__col-xxs--12 grid__col-m--4">
             <h2>
-                <span class="word-breaker js-reveal"><?=__('Bài viết liên quan','utweb-dailinh')?></span></h2>
+                <span class="word-breaker js-reveal">
+                    <?php if ( is_singular('bat_dong_san') ) : ?>
+                        <?=__('Bất động sản liên quan','utweb-dailinh')?>
+                    <?php elseif ( is_singular('du_an') ) : ?>
+                        <?=__('Dự án liên quan','utweb-dailinh')?>
+                    <?php else : ?>
+                        <?=__('Bài viết liên quan','utweb-dailinh')?>
+                    <?php endif; ?>
+                </span>
+            </h2>
         </div>
     </div>
 </div>
