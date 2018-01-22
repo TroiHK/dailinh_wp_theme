@@ -9,7 +9,7 @@
 
 <?php get_template_part( 'template-parts/home/mainslider' ); ?>
 
-<?php // get_template_part( 'template-parts/home/actu' ); ?>
+<?php get_template_part( 'template-parts/home/actu' ); ?>
 
 <?php get_template_part( 'template-parts/home/iconiques' ); ?>
 
