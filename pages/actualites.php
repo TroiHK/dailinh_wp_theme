@@ -5,7 +5,7 @@
 global $modulejs;
 $modulejs = 'default';
 get_header();
-$post_type = get_field('utweb_post_type');
+$post_type = get_field('utweb_post_type') ? get_field('utweb_post_type') : 'bat_dong_san';
 ?>
 
 <section class="section">
