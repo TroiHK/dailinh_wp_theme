@@ -47,7 +47,7 @@
 		<article class="news-slide">
 			<div class="news-slide__inner">
 				<div class="news-slide__info">
-					<time><?= get_the_date('d-m-Y') ?></time>
+					<time><?= get_the_date('d - m - Y') ?></time>
 					<h3><a href="<?= get_the_permalink() ?>"><?= get_the_title() ?></a></h3>
 				</div>
 				<figure class="news-slide__img">
