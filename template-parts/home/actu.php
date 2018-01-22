@@ -1,4 +1,4 @@
-<?php while ( have_rows('actualites_hp') ) : the_row(); ?>
+<?php while ( have_rows('actualites_hp') ) : the_row(); die('0'); ?>
 <?php
 	$arrg = array(
 		'post_type' => 'bat_dong_san',
@@ -9,7 +9,7 @@
 	$actu_post = new WP_Query($arrg);
 
 	var_dump($actu_post);
-	die();
+	die('0');
 
 	$title = get_sub_field('title');
 	$description = get_sub_field('description');
