@@ -8,9 +8,6 @@
 	);
 	$actu_post = new WP_Query($arrg);
 
-	var_dump($actu_post);
-	die('0');
-
 	$title = get_sub_field('title');
 	$description = get_sub_field('description');
 	$link = get_sub_field('lien');
