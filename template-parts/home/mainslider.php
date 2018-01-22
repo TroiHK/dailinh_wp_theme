@@ -12,6 +12,7 @@
 			?>
 				<?php 
 					$slide_image = $slide_image ? $slide_image : wp_get_attachment_image_src( get_post_thumbnail_id($projetID) );
+					var_dump($slide_image);
 					$url_image = $slide_image['sizes']['main-slider'];
 					$url_image_mobile = $slide_image['sizes']['mobile-slide'];
 				?>
