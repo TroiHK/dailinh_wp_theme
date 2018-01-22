@@ -6,7 +6,7 @@ $prev_id = get_previous_post_id(get_the_ID());
     <div class="grid__row">
         <div class="grid__col-xxs--12 grid__col-m--4">
             <h2>
-                <span class="word-breaker js-reveal"><?=__('Découvrez nos actualités','utweb-dailinh')?></span></h2>
+                <span class="word-breaker js-reveal"><?=__('Bài viết liên quan','utweb-dailinh')?></span></h2>
         </div>
     </div>
 </div>
@@ -22,7 +22,7 @@ $prev_id = get_previous_post_id(get_the_ID());
         </figure>
         <span class="entry__navigation-info">
     		<span class="entry__navigation-title word-breaker"><?=get_the_title($next_id)?></span>
-    		<span class="link"><?=__('Découvrir','utweb-dailinh')?></span>
+    		<span class="link"><?=__('Đọc thêm','utweb-dailinh')?></span>
     	</span>
         <i class="arrow-left"></i>
     </a>
@@ -41,7 +41,7 @@ $prev_id = get_previous_post_id(get_the_ID());
         </figure>
         <span class="entry__navigation-info">
             <span class="entry__navigation-title word-breaker"><?=get_the_title($prev_id)?></span>
-            <span class="link"><?=__('Découvrir','utweb-dailinh')?></span>
+            <span class="link"><?=__('Đọc thêm','utweb-dailinh')?></span>
         </span>
 
         <i class="arrow-right"></i>

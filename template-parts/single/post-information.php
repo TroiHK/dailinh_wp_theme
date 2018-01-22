@@ -22,14 +22,14 @@
             <div class="entry-category word-breaker js-reveal"><?=$output?></div>
             <?php } ?>
             <div class="entry-meta">
-                <label class="js-reveal" for=""><?=__('Date de l\'actualité','utweb-dailinh');?></label>
-                <p class="js-reveal"><?php echo get_the_date( 'd.m.Y'); ?></p>
+                <label class="js-reveal" for=""><?=__('Ngày đăng','utweb-dailinh');?></label>
+                <p class="js-reveal"><?php echo get_the_date( 'd - m - Y'); ?></p>
             </div>
 
             <div class="entry-body js-reveal">
                 <p><?php the_content();?></p>
                 <a href="#" class="link-share addthis_button_compact">
-                    <?=__('Partager','utweb-dailinh');?>
+                    <?=__('Chia sẽ bài viết','utweb-dailinh');?>
                     <?php echo getSvgIcon('share', '0 0 18 22'); ?>
                 </a>
             </div>
