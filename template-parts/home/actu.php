@@ -53,7 +53,7 @@
 				<figure class="news-slide__img">
 					<a href="<?= get_the_permalink() ?>">
 						<span class="btn-round"><i><span></span></i></span>
-						<img src="<?= get_the_post_thumnail($post, 'actu-thumnail') ?>" alt="<?= $post->post_name ?>">
+						<img src="<?= get_the_post_thumbnail_url($post, 'actu-thumnail') ?>" alt="<?= $post->post_name ?>">
 					</a>
 				</figure>
 			</div>
