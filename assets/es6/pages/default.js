@@ -453,7 +453,7 @@ export default class Default {
 
 		
 		var $tabs = $('<ul />').addClass('gallery__tabs').appendTo($container);
-		$tabs.append($('<li />').addClass('active').html('<a href="#">Tout</a>'));
+		$tabs.append($('<li />').addClass('active').html('<a href="#">Tất cả</a>'));
 
 		for(var i = 0; i < elts.length; i ++) {
 			if( $.inArray(elts[i].type, types) < 0 ) {
@@ -520,7 +520,7 @@ export default class Default {
 					$slide.append($('<div class="slide-content" />').append($('<div class="inner" />')));
 
 					// Video
-					if( url.indexOf('mp4') >= 0 )  {
+					if( url.indexOf('youtube') >= 0 )  {
 
 						$slide.find('.inner').append('<video controls autoload><source src="' + url + '" /></video>').addClass('img-is-loaded').parent().addClass('img-is-loaded');
 					}

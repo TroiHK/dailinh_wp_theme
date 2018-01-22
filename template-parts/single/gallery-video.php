@@ -9,7 +9,7 @@ $galleryArray = array();
                 <?php foreach ($gallery_items as $item) : ?>
                 <?php  
                     $myObj = (object) array();
-                    $myObj->type = "photo";
+                    $myObj->type = "Hình ảnh";
                     $myObj->url = $item['url'];
                     $myObj->title = $item['title'];
                     $myObj->legend = $item['caption'];
