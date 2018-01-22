@@ -11,10 +11,15 @@
 				$slide_image = get_sub_field('image');
 			?>
 				<?php 
-					$slide_image = $slide_image ? $slide_image : wp_get_attachment_image_src( get_post_thumbnail_id($projetID) );
-					var_dump($slide_image);
-					$url_image = $slide_image['sizes']['main-slider'];
-					$url_image_mobile = $slide_image['sizes']['mobile-slide'];
+					if ( $slide_image ) :
+						$url_image = $slide_image['sizes']['main-slider'];
+						$url_image_mobile = $slide_image['sizes']['mobile-slide'];
+					else :
+						$slide_image = wp_get_attachment_image_src( get_post_thumbnail_id($projetID), 'main-slider' );
+						$url_image = $slide_image[0];
+						$slide_image_mobile = wp_get_attachment_image_src( get_post_thumbnail_id($projetID), 'mobile-slide' );
+						$url_image_mobile = $slide_image_mobile[0];
+					endif;
 				?>
 	            <div class="slide">
 	                <figure class="js-lazy slide-desktop" data-src="<?= $url_image ?>">
