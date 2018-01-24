@@ -71,6 +71,10 @@
         <?php require_once("./wp-content/themes/dailinh_wp_theme/assets/svg/layout/puff.svg"); ?>
     </div>
 
+    <img src="<?= get_template_directory_uri() ?>/assets/svg/layout/shape2.svg" alt="" class="shape shape1">
+	<img src="<?= get_template_directory_uri() ?>/assets/svg/layout/shape3.svg" alt="" class="shape shape2">
+	<img src="<?= get_template_directory_uri() ?>/assets/svg/layout/shape4.svg" alt="" class="shape shape3">
+
 	<header class="main-header">
 		<div class="grid">
 			<div class="grid__row">

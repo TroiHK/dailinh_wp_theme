@@ -25,9 +25,6 @@ get_header();
         if( have_rows('ing_page_contenu') ):
             while ( have_rows('ing_page_contenu') ) : the_row();
                 switch ( get_row_layout() ) {
-                    case 'ing_con_team_member':
-                        get_template_part( 'template-parts/contenu/member' );
-                        break;
                     case 'ing_con_w_meta':
                         get_template_part( 'template-parts/contenu/w-meta' );
                         break;
