@@ -134,7 +134,7 @@
 			small {
 				display: inline-block;
 				line-height: 1.4em;
-				color: $grey-dark;
+				color: $grey-dark2;
 			}
 		}
 
@@ -147,7 +147,7 @@
 		}
 
 		p, ul, ol, img {
-			color: rgba($grey-dark, 0.8);
+			color: rgba($grey-dark2, 0.8);
 			margin-bottom: #{$line-height * 1.2}em;
 		}
 
@@ -257,7 +257,7 @@
 
 			td {
 				padding: 20px;
-				color: rgba($grey-dark, 0.8);
+				color: rgba($grey-dark2, 0.8);
 				border-left: 1px solid rgba(#000, 0.2);
 				border-bottom: 1px solid rgba(#000, 0.2);
 
@@ -323,7 +323,7 @@
 				display: inline-block;
 				margin-left: 10px;
 				font-weight: 600;
-				color: $grey-dark;
+				color: $grey-dark2;
 			}
 
 			&.inline {

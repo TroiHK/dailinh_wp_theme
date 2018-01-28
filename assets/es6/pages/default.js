@@ -501,7 +501,7 @@ export default class Default {
 
 
 
-		function constructSlider() {
+		function constructSlider() {  
 
 			// Delete all content
 			$slider.find('.slick-slide').remove();
