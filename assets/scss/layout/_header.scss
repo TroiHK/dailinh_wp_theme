@@ -7,6 +7,12 @@
 	line-height: 2.975em;
 	font-weight: 600;
 	font-size: 0.875em;
+	
+	body:not(.home) & {
+		background-image: url(../img/layout/header-bg.jpg);
+		background-size: cover;
+		background-position: center;
+	}
 
 	@media #{md('m')} {
 		padding: 40px 0;
