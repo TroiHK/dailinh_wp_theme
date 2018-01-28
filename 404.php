@@ -5,7 +5,7 @@
 ?>
 
 <section class="error__section section">
-	<img class="js-reveal" src="<?php echo get_template_directory_uri(); ?>/assets/img/layout/404.svg" alt="">
+	<img class="js-reveal" src="<?php echo get_template_directory_uri(); ?>/assets/img/layout/404.jpg" alt="">
 	<div class="grid">
 		<div class="grid__row">
 			<div class="grid__col-xxs--0 grid__col-m--1"></div>
