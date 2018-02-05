@@ -28649,7 +28649,7 @@ var Default = function () {
 			});
 
 			var $tabs = (0, _jquery2.default)('<ul />').addClass('gallery__tabs').appendTo($container);
-			$tabs.append((0, _jquery2.default)('<li />').addClass('active').html('<a href="#">Tout</a>'));
+			$tabs.append((0, _jquery2.default)('<li />').addClass('active').html('<a href="#">All</a>'));
 
 			for (var i = 0; i < elts.length; i++) {
 				if (_jquery2.default.inArray(elts[i].type, types) < 0) {

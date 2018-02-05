@@ -6,6 +6,7 @@ global $modulejs;
 $modulejs = 'default';
 get_header();
 $post_type = get_field('utweb_post_type');
+$taxanomy = get_field('utweb_taxanomy');
 ?>
 
 <section class="section">
@@ -28,6 +29,15 @@ $post_type = get_field('utweb_post_type');
                             'orderby'      => 'date',
                             'order'    => 'DESC'
                         );
+
+                        if ( $taxanomy ) {
+                            $args['tax_query'] = array(
+                                'taxonomy' => 'loai_du_an',
+                                'field'    => 'term_id',
+                                'terms'    => $taxanomy,
+                            );
+                        }
+
                         $posts = new WP_Query( $args );
 
                     ?>
