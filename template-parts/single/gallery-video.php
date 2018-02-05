@@ -6,21 +6,20 @@ $galleryArray = array();
     <section class="entry-gallery">
         <div class="center">
             <div class="entry-gallery__imgs">
-                <?php foreach ($gallery_items as $item) : ?>
+                <?php foreach ($gallery_items as $item) : 
                     $myObj = (object) array();
                     $myObj->type = "Hình Ảnh";
                     $myObj->url = $item['url'];
                     $myObj->title = $item['title'];
                     $myObj->legend = $item['caption'];
                     $galleryArray[] = $myObj;
-                <?php endforeach; ?>
-
-                <script>
-                    var galleryArray = <?=json_encode($galleryArray);?>;
-                </script>
+                endforeach; ?>
                 
                 <?php if($galleryArray):?>
                     <?php $image_ =  $galleryArray[0]; ?>
+                    <script>
+                        var galleryArray = <?=json_encode($galleryArray);?>;
+                    </script>
                     <article class="entry-gallery__img js-reveal">
                         <h2>
                             <span class="word-breaker js-reveal"><?=__('Hình Ảnh','utweb-dailinh')?></span>
