@@ -27,7 +27,7 @@ $taxanomy = get_field('utweb_taxanomy');
                             'post_type'  => $post_type,
                             'posts_per_page'     => -1,
                             'orderby'      => 'date',
-                            'order'    => 'DESC'
+                            'order'    => 'DESC',
                         );
 
                         if ( $taxanomy ) {
