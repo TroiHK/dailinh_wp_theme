@@ -31,10 +31,13 @@ $taxanomy = get_field('utweb_taxanomy');
                         );
 
                         if ( $taxanomy ) {
+                            $taxQuery = array();
+                            $taxQuery['relation'] = 'AND';
+                            $taxQuery[] = $taxanomy;
                             $args['tax_query'] = array(
                                 'taxonomy' => 'loai_du_an',
                                 'field'    => 'term_id',
-                                'terms'    => array($taxanomy),
+                                'terms'    => $taxQuery,
                             );
                         }
 
