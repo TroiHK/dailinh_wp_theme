@@ -15,7 +15,7 @@ $galleryArray = array();
                     $galleryArray[] = $myObj;
                 endforeach; ?>
 
-                <?php var_dump(galleryArray); die(); ?>
+                <?php var_dump($galleryArray); die(); ?>
                 
                 <?php if($galleryArray):?>
                     <?php $image_ =  $galleryArray[0]; ?>
