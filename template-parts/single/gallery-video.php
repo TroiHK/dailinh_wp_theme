@@ -14,12 +14,13 @@ $galleryArray = array();
                     $myObj->legend = $item['caption'];
                     $galleryArray[] = $myObj;
                 <?php endforeach; ?>
+
+                <script>
+                    var galleryArray = <?=json_encode($galleryArray);?>;
+                </script>
                 
                 <?php if($galleryArray):?>
                     <?php $image_ =  $galleryArray[0]; ?>
-                    <script>
-                        var galleryArray = <?=json_encode($galleryArray);?>;
-                    </script>
                     <article class="entry-gallery__img js-reveal">
                         <h2>
                             <span class="word-breaker js-reveal"><?=__('Hình Ảnh','utweb-dailinh')?></span>
