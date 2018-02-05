@@ -40,8 +40,6 @@ $taxanomy = get_field('utweb_taxanomy');
                             );
                         }
 
-                        var_dump($args);
-
                         $posts = new WP_Query( $args );
 
                     ?>
