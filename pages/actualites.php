@@ -7,6 +7,7 @@ $modulejs = 'default';
 get_header();
 $post_type = get_field('utweb_post_type');
 $taxanomy = get_field('utweb_taxanomy');
+var_dump($taxanomy);
 ?>
 
 <section class="section">
