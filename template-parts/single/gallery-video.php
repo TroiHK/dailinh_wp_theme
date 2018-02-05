@@ -14,8 +14,6 @@ $galleryArray = array();
                     $myObj->legend = $item['caption'];
                     $galleryArray[] = $myObj;
                 endforeach; ?>
-
-                <?php var_dump($galleryArray); die(); ?>
                 
                 <?php if($galleryArray):?>
                     <?php $image_ =  $galleryArray[0]; ?>
@@ -29,7 +27,7 @@ $galleryArray = array();
 
                         <a href="#" class="trigger-gallery js-reveal" data-gallery="galleryArray" data-trigger-hook="1">
                             <figure>
-                                <img src="<?=$image_['url']?>" alt="<?=$image_['title']?>">
+                                <img src="<?=$image_->url?>" alt="<?=$image_->title?>">
                             </figure>
                             <i><span></span></i>
                         </a>
