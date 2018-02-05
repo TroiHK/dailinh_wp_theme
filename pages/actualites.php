@@ -34,7 +34,7 @@ $taxanomy = get_field('utweb_taxanomy');
                             $args['tax_query'] = array(
                                 'taxonomy' => 'loai_du_an',
                                 'field'    => 'term_id',
-                                'terms'    => $taxanomy,
+                                'terms'    => array($taxanomy),
                             );
                         }
 
