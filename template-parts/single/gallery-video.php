@@ -14,6 +14,8 @@ $galleryArray = array();
                     $myObj->legend = $item['caption'];
                     $galleryArray[] = $myObj;
                 endforeach; ?>
+
+                <?php var_dump(galleryArray); die(); ?>
                 
                 <?php if($galleryArray):?>
                     <?php $image_ =  $galleryArray[0]; ?>
