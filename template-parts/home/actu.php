@@ -1,7 +1,7 @@
 <?php while ( have_rows('actualites_hp') ) : the_row(); ?>
 <?php
 	$arrg = array(
-		'post_type' => 'bat_dong_san',
+		'post_type' => 'post',
 		'orderby' => 'post_date',
 		'posts_per_page' => 6,
 		'order' => 'DESC'

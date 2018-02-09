@@ -43,6 +43,15 @@
             left: 50%;
             transform: translate(-50%, -50%);
         }
+
+        canvas {
+			display: block;
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+		}
     </style>
 
 	<?php the_field('within_head', 'option'); ?>
@@ -53,6 +62,8 @@
 	?>
 
 </head>
+
+<canvas id="canvas"></canvas>
 
 <body <?php body_class(); ?>>
 	
