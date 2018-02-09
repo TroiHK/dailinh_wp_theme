@@ -66,7 +66,7 @@
 				$(window).on('resize', function() {
 					canvas.width = $(window).width();
 					canvas.height = $(window).height();
-					ctx.fillStyle = '#fff';
+					ctx.fillStyle = '#000';
 					ctx.fillRect(0, 0, canvas.width, canvas.height);
 				});
 
@@ -175,7 +175,7 @@
 					// clear
 					ctx.globalCompositeOperation = 'source-over';
 					ctx.globalAlpha = 0.18;
-					ctx.fillStyle = '#000';
+					ctx.fillStyle = '';
 					ctx.fillRect(0, 0, canvas.width, canvas.height);
 
 					// re-draw
