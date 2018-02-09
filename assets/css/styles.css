@@ -4805,7 +4805,7 @@ a:hover .link:after {
 }
 
 .entry-body p, .entry-body ul, .entry-body ol, .entry-body img {
-  color: rgba(60, 59, 59, 0.8);
+  color: #fff;
   margin-bottom: 1.95em;
 }
 
