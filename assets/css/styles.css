@@ -4959,7 +4959,7 @@ a:hover .link:after {
 .entry-meta label {
   font-size: 0.75em;
   text-transform: uppercase;
-  color: #bcbcbc;
+  color: #ffffff;
   display: block;
   font-weight: 600;
   margin-bottom: 0.5em;
@@ -5124,7 +5124,7 @@ a:hover .link:after {
 }
 
 .entry-gallery__img figcaption {
-  color: #bcbcbc;
+  color: #ffffff;
   font-size: 0.75em;
   font-weight: 500;
   display: block;
@@ -7237,7 +7237,7 @@ a:hover .entry__navigation-img:before {
 }
 
 .simplebar-track.vertical {
-  background: rgba(188, 188, 188, 0.3);
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .simplebar-track.horizontal {
@@ -7248,7 +7248,7 @@ a:hover .entry__navigation-img:before {
   right: 0;
   width: 100%;
   border-radius: 2px;
-  background: #bcbcbc;
+  background: white;
   opacity: 1;
 }
 
