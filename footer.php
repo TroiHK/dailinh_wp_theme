@@ -71,7 +71,7 @@
 				});
 
 				// init
-				ctx.fillStyle = '#fff';
+				ctx.fillStyle = '#000';
 				ctx.fillRect(0, 0, canvas.width, canvas.height);
 				// objects
 				var listFire = [];
@@ -175,7 +175,7 @@
 					// clear
 					ctx.globalCompositeOperation = 'source-over';
 					ctx.globalAlpha = 0.18;
-					ctx.fillStyle = '#fff';
+					ctx.fillStyle = '#000';
 					ctx.fillRect(0, 0, canvas.width, canvas.height);
 
 					// re-draw
