@@ -32,10 +32,10 @@
 			</div>
 		</div>
 		<div class="news-arrows">
-			<a href="#" class="prev">
+			<a href="#" class="prev" style="background-color: transparent;">
 				<i class="arrow-left"></i>
 			</a>
-			<a href="#" class="next">
+			<a href="#" class="next" style="background-color: transparent;">
 				<i class="arrow-right"></i>
 			</a>
 		</div>

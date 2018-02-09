@@ -175,7 +175,7 @@
 					// clear
 					ctx.globalCompositeOperation = 'source-over';
 					ctx.globalAlpha = 0.18;
-					ctx.fillStyle = '';
+					ctx.fillStyle = '#feba39';
 					ctx.fillRect(0, 0, canvas.width, canvas.height);
 
 					// re-draw
