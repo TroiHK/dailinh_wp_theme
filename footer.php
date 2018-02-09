@@ -66,12 +66,12 @@
 				$(window).on('resize', function() {
 					canvas.width = $(window).width();
 					canvas.height = $(window).height();
-					ctx.fillStyle = '#000';
+					ctx.fillStyle = '#fff';
 					ctx.fillRect(0, 0, canvas.width, canvas.height);
 				});
 
 				// init
-				ctx.fillStyle = '#000';
+				ctx.fillStyle = '#fff';
 				ctx.fillRect(0, 0, canvas.width, canvas.height);
 				// objects
 				var listFire = [];
@@ -175,7 +175,7 @@
 					// clear
 					ctx.globalCompositeOperation = 'source-over';
 					ctx.globalAlpha = 0.18;
-					ctx.fillStyle = '#000';
+					ctx.fillStyle = '#fff';
 					ctx.fillRect(0, 0, canvas.width, canvas.height);
 
 					// re-draw
