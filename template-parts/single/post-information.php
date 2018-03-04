@@ -1,7 +1,11 @@
 <div class="grid">
     <div class="grid__row">
         <div class="grid__col-xxs--0 grid__col-m--1"></div>
-        <div class="grid__col-xxs--12 grid__col-m--5 grid__col-l--4">
+        <?php if ( is_singular('post') ) : ?>
+            <div class="grid__col-xxs--12 grid__col-m--7">
+        <?php else : ?>
+            <div class="grid__col-xxs--12 grid__col-m--5 grid__col-l--4">
+        <?php endif; ?>
             <?php
                 $category_  =  get_the_category(get_the_ID());
                 $output     = "";

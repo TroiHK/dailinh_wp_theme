@@ -54,6 +54,11 @@
     	}, false);
 	</script>
 
+	<!-- scripts:vendor -->
+    <?php $custom_time = filemtime(dirname(__FILE__) .'/assets/js/custom.js'); ?>
+	<script defer src="<?php echo get_template_directory_uri(); ?>/assets/js/custom.js?v=<?php echo $custom_time; ?>"></script>
+	<!-- ./scripts:custom -->
+
 	<script>
 		;(function ($) {
 			// when animating on canvas, it is best to use requestAnimationFrame instead of setTimeout or setInterval

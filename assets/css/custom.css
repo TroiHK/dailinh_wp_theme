@@ -1,0 +1,36 @@
+@media (min-width: 62em) {
+	.entry-body h1 {
+    	margin-left: 0;
+	}
+}
+
+/*.form-submit*/
+.form-submit {
+    padding: 10px 30px;
+    background: #1072ba;
+    color: #fff;
+    cursor: pointer;
+}
+.form-submit:hover {
+	background: #004e78;
+}
+
+/*text color*/
+.entry-body p, .entry-body ul, .entry-body ol, .entry-body img {
+	color: #000;
+}
+.entry-body a:not(.link):not(.link-share) {
+	color: #1072ba;
+}
+.entry-body a:not(.link):not(.link-share):hover {
+	color: #004e78;
+}
+.entry-body a:not(.link):not(.link-share) {
+	opacity: 1;
+}
+
+/*img*/
+.entry-body img{
+	max-width: 100%;
+	height: auto;
+}
